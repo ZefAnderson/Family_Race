@@ -1,0 +1,93 @@
+body {
+    background-image: url(road.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    background-color: green;
+}
+img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    top: 60px;
+    background-color: aquamarine;
+    z-index: 1;
+    border-color: mediumblue;
+    border-style: dashed;
+}
+@keyframes movement {
+    from {
+        left: 0px;
+        top: 60px;
+    }
+    to {
+        left: 1265px;
+        top: 60px;
+    }
+}
+img:nth-of-type(1) {
+    animation-name: movement;
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0.165, 0.14, 0.80, 1);
+    animation-delay: 1.25s;
+}
+img:nth-of-type(2) {
+    animation-name: movement;
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0.125, 0.44, 0.74, 1);
+    animation-delay: 1.25s;
+}
+img:nth-of-type(3) {
+    animation-name: movement;
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0.215, 0.310, 0.655, 1);
+    animation-delay: 1.25s;
+}
+img:nth-of-type(4) {
+    animation-name: movement;
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0.075, 0.082, 0.165, 1);
+    animation-delay: 1.25s; 
+}  
+img:nth-of-type(5) {
+    animation-name: movement;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.39, 0.475, 0.765, 1);
+    animation-delay: 10s;
+}  
+.track {
+    display: flex;
+    flex-direction: row;
+    height: 780px;
+    position: fixed;
+}
+.start {
+    color: whitesmoke;
+    background-color: firebrick;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    font-weight: bold;
+    width: 50px;
+    margin-left: 125px;
+}
+.road {
+    background-color: transparent;
+    margin: 0px;
+    width: 1200px;
+}
+.finish {
+    width: 50px;
+    background-image: url(finish_line.jpeg);
+    background-size: contain;
+    margin: 0px;
+}
+.button {
+    background-color: green;
+    width: 100px;
+    position: relative;
+    z-index: 1;
+    align-self: center;
+}
